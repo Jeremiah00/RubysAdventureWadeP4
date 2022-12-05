@@ -75,6 +75,7 @@ public class RubyController : MonoBehaviour
         {
             if (isInvincible)
                 return;
+            animator.SetTrigger("Hit");
             isInvincible = true;
             invincibleTimer = timeInvincible;
         }
