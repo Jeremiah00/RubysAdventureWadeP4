@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1913545357189928771}
   - component: {fileID: 3590990966859994961}
   - component: {fileID: 3857087599830573772}
+  - component: {fileID: 367857207}
   m_Layer: 0
   m_Name: Robot
   m_TagString: Untagged
@@ -121,10 +122,10 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.013768762, y: -0.70220983}
+  m_Offset: {x: -0.026177317, y: 0.4316442}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 2.1333334, y: 2.1333334}
     newSize: {x: 2.56, y: 2.56}
     adaptiveTilingThreshold: 0.5
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.9352787, y: 0.714978}
+  m_Size: {x: 1.0151708, y: 0.79487014}
   m_EdgeRadius: 0
 --- !u!95 &3857087599830573772
 Animator:
@@ -154,3 +155,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &367857207
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58554153159378322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73ae5b6b400df6142bff5b9b84f0268b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  vertical: 0
+  changeTime: 3
+  smokeEffect: {fileID: 6712260348640256992, guid: e60e547c8b7c86d4a93fcf83b6f4a8ef, type: 3}
