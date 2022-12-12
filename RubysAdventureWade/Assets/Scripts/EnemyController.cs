@@ -15,11 +15,16 @@ public class EnemyController : MonoBehaviour
     public ParticleSystem smokeEffect;
     float timer;
     int direction = 1;
+
+    AudioSource audioSource;
+    
+    
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         timer = changeTime;
         animator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -58,6 +63,7 @@ public class EnemyController : MonoBehaviour
             position.x = position.x + Time.deltaTime * speed * direction; ;
             animator.SetFloat("Move X", direction);
             animator.SetFloat("Move Y", 0);
+            
         }
 
         rigidbody2D.MovePosition(position);
@@ -78,7 +84,13 @@ public class EnemyController : MonoBehaviour
         rigidbody2D.simulated = false;
         animator.SetTrigger("Fixed");
         smokeEffect.Stop();
+        
      
     }
-    
+    public void PlaySound(AudioClip clip)
+    {
+        audioSource.PlayOneShot(clip);
+    }
+
+
 }
